@@ -16,6 +16,9 @@ export default class Flickr {
             nojsoncallback: 1
         }, parameters));
 
-        return rp(this.url + '?' + query);
+        return rp({
+            url: this.url + '?' + query,
+            json: true
+        });
     }
 }

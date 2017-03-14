@@ -37,7 +37,10 @@ var Flickr = function () {
                 nojsoncallback: 1
             }, parameters));
 
-            return (0, _requestPromise2.default)(this.url + '?' + query);
+            return (0, _requestPromise2.default)({
+                url: this.url + '?' + query,
+                json: true
+            });
         }
     }]);
 
