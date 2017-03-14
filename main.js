@@ -2,9 +2,9 @@ import qs from 'qs';
 import rp from 'request-promise';
 
 export default class Flickr {
-    constructor(options) {
-        this.api_key = options.api_key;
-        this.format = options.format;
+    constructor(key, format) {
+        this.api_key = key;
+        this.format = format;
         this.url = 'https://api.flickr.com/services/rest' || options.url;
     }
 

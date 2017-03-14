@@ -19,11 +19,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Flickr = function () {
-    function Flickr(options) {
+    function Flickr(key, format) {
         _classCallCheck(this, Flickr);
 
-        this.api_key = options.api_key;
-        this.format = options.format;
+        this.api_key = key;
+        this.format = format;
         this.url = 'https://api.flickr.com/services/rest' || options.url;
     }
 
