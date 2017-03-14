@@ -12,7 +12,8 @@ export default class Flickr {
         let query = qs.stringify(Object.assign({
             api_key: this.api_key,
             method: 'flickr.' + method,
-            format: this.format
+            format: this.format,
+            nojsoncallback: 1
         }, parameters));
 
         return rp(this.url + '?' + query);

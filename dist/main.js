@@ -33,7 +33,8 @@ var Flickr = function () {
             var query = _qs2.default.stringify(Object.assign({
                 api_key: this.api_key,
                 method: 'flickr.' + method,
-                format: this.format
+                format: this.format,
+                nojsoncallback: 1
             }, parameters));
 
             return (0, _requestPromise2.default)(this.url + '?' + query);
